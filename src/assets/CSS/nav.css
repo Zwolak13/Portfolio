@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.nav-border::after{
+content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: 
+        conic-gradient(from var(--angle), transparent 65%, #51a2ff 75%, transparent 85%),
+        conic-gradient(from calc(var(--angle) + 180deg), transparent 65%, #51a2ff 75%, transparent 85%);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    border-radius: 32px;
+    filter: blur(1px);
+    animation: 6s spinB linear infinite;
+}
+
+@keyframes spinB {
+  0% { --angle: 0deg; }
+
+  100% {--angle: 360deg}
+}
+

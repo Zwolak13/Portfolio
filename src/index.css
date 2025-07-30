@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap');
+
+
+@theme{
+    --font-geist: "Geist", sans-serif;
+    --font-liber: "Libertinus Mono", monospace;
+}
