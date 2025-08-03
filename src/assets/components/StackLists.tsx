@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState } from 'react';
 import StackObject from './StackObject';
 import stacks from '../Data/Stacks'
+import Window from './Window';
 
 interface StackListsProps{
     setVisible: React.Dispatch<React.SetStateAction<boolean>>;
@@ -39,29 +40,9 @@ export default function StackLists({setVisible}: StackListsProps){
         exit={{ opacity: 0, scale: 0.95, y: 20 }}
         transition={{ duration: 0.3, ease: "easeOut" }}
       >
-        <div className="w-[40%] h-full translate-x-60 translate-y-60">
-          <div className="w-full flex flex-row text-xl justify-center bg-blue-400">
-            {options.map((item, index) => (
-              <h2
-                key={index}
-                className={`flex flex-row py-2 px-8 gap-2 justify-center text-black font-medium items-center ${
-                  activeStack === item.name && "bg-blue-500/50 text-white"
-                }`}
-                onClick={() => handleStackChange(item.name)}
-              >
-                <item.icon />
-                {item.name}
-              </h2>
-            ))}
-            <h2
-              className="py-2 px-4 flex justify-center border-2 bg-white font-bold border-white ml-auto"
-              onClick={handleClose}
-            >
-              X
-            </h2>
-          </div>
-
-          <div className="w-full bg-white/40 border-x-2 border-b-2 border-gray-300/40 grid grid-cols-4 gap-4 px-4 py-2 grid-rows-3">
+        <Window title='Stack.exe' tabs={options} onTabChange={handleStackChange} activeTab={activeStack} onClose={handleClose}
+        className='absolute top-50 left-40'>
+          <div className="w-full grid grid-cols-6 gap-4 px-4 py-2 grid-rows-3">
             {stacks
               .filter((el) => el.type === activeStack)
               .map((item, index) => (
@@ -72,7 +53,7 @@ export default function StackLists({setVisible}: StackListsProps){
                 />
               ))}
           </div>
-        </div>
+        </Window>
       </motion.div>
     )
   </AnimatePresence>

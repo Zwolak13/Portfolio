@@ -15,7 +15,7 @@ const projects:ProjectsProps[] = [
         name: 'ShopLifter',
         descritpion: 'Webapplication for managing shopping lists',
         img_path: shoplifter,
-        github_link: 'https://github.com/Zwolak13?tab=repositories',
+        github_link: 'https://github.com/Zwolak13/ShopLifter',
         stack: ['React','Tailwind', 'Java', "Gradle", 'SpringBoot','Vite','JS']
     },
     {
