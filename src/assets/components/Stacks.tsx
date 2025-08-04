@@ -7,7 +7,7 @@ export default function Stacks(){
     const [isClosed, setIsClosed] = useState(false);
 
     return <section id="three" className={`w-[100vw] sm:min-h-[100vh] min-h-[120vh] bg-black flex  text-blue-500 relative`}>
-       <h1 className="absolute text-blue-400 text-5xl sm:top-20 sm:right-140  top-10 left-15"
+       <h1 className="absolute text-blue-400 text-5xl sm:top-20 sm:right-120  top-10 right-20"
         onClick={() => setIsClosed(false)}>
             My Stack
             <div>

@@ -34,7 +34,7 @@ export default function StackLists({setVisible,visible}: StackListsProps){
     return (
   <WindowAnimate  show={!visible}>
         <Window title='Stack.exe' tabs={options} onTabChange={handleStackChange} activeTab={activeStack} onClose={handleClose}
-        className='absolute sm:top-50 sm:left-40 top-30 '>
+        className='absolute sm:top-50 sm:left-40 top-40 '>
           <div className="w-full grid sm:grid-cols-6 grid-cols-2 gap-4 px-4 py-2 grid-rows-3">
             {stacks
               .filter((el) => el.type === activeStack)
