@@ -1,13 +1,14 @@
 import { Monitor, Database, Server, Settings} from 'lucide-react';
-import { motion, AnimatePresence } from "framer-motion";
 
 import { useState } from 'react';
 import StackObject from './StackObject';
 import stacks from '../Data/Stacks'
 import Window from './Window';
+import WindowAnimate from './WindowAnimate';
 
 interface StackListsProps{
     setVisible: React.Dispatch<React.SetStateAction<boolean>>;
+    visible: boolean;
 }
 
 const options = [
@@ -18,7 +19,7 @@ const options = [
 
 ]
 
-export default function StackLists({setVisible}: StackListsProps){
+export default function StackLists({setVisible,visible}: StackListsProps){
     const [activeStack, setActiveStack] = useState('Frontend')
     
 
@@ -31,18 +32,10 @@ export default function StackLists({setVisible}: StackListsProps){
     }
 
     return (
-  <AnimatePresence>
-    (
-      <motion.div
-        className="w-full"
-        initial={{ opacity: 0, scale: 0.9, y: 30 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        exit={{ opacity: 0, scale: 0.95, y: 20 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
-      >
+  <WindowAnimate  show={!visible}>
         <Window title='Stack.exe' tabs={options} onTabChange={handleStackChange} activeTab={activeStack} onClose={handleClose}
-        className='absolute top-50 left-40'>
-          <div className="w-full grid grid-cols-6 gap-4 px-4 py-2 grid-rows-3">
+        className='absolute sm:top-50 sm:left-40 top-30 '>
+          <div className="w-full grid sm:grid-cols-6 grid-cols-2 gap-4 px-4 py-2 grid-rows-3">
             {stacks
               .filter((el) => el.type === activeStack)
               .map((item, index) => (
@@ -54,8 +47,6 @@ export default function StackLists({setVisible}: StackListsProps){
               ))}
           </div>
         </Window>
-      </motion.div>
-    )
-  </AnimatePresence>
+  </WindowAnimate>
 );
 }

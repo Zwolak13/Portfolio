@@ -51,8 +51,8 @@ export default function WindowRoll({
           </button>
         </div>
 
-        <AnimatePresence initial={false}>
-          {active &&  <motion.div
+        <AnimatePresence initial={true}>
+          {!active &&  <motion.div
             key="projects-list"
             initial={{ height: 0, opacity: 0, translateY: -30}}
             animate={{ height: "auto", opacity: 1, translateY: 0}}

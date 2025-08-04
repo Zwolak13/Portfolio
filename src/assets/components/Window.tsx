@@ -30,7 +30,7 @@ export default function Window({
 }: WindowComponentProps) {
   
   return (
-    <div className={`w-[90%] max-w-4xl ${className}`}>
+    <div className={`sm:w-[90%] w-full max-w-4xl ${className}`}>
 
       <div className="bg-gray-800/95 backdrop-blur-xl border border-blue-400/30 rounded-lg shadow-2xl overflow-hidden">
 
@@ -63,8 +63,8 @@ export default function Window({
                   }`}
                   onClick={() => onTabChange && onTabChange(tab.name)}
                 >
-                  {tab.icon && <tab.icon className="w-4 h-4" />}
-                  <span>{tab.name}</span>
+                  {tab.icon && <tab.icon className="w-4 h-4 "/>}
+                  <span className=' sm:block hidden'>{tab.name}</span>
                   {activeTab === tab.name && (
                     <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-300"></div>
                   )}
