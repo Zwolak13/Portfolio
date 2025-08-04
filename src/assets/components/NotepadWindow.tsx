@@ -15,7 +15,7 @@ export default function NotepadWindow({
 }: NotepadWindowProps) {
   
   return (
-    <div className={`w-[90%] max-w-2xl ${className}`}>
+    <div className={`sm:w-[90%] w-full max-w-2xl ${className}`}>
 
       <div className="bg-gray-50/98 backdrop-blur-xl border border-blue-400 rounded-lg shadow-2xl overflow-hidden">
 

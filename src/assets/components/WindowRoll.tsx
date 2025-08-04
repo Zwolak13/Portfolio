@@ -28,7 +28,7 @@ export default function WindowRoll({
 
 
 
-    return <div className={`w-[90%] max-w-3xl ${className}`}>
+    return <div className={`sm:w-[90%] w-full max-w-3xl ${className}`}>
         <div className="bg-gray-800/95 backdrop-blur-xl border border-blue-400/30 rounded-lg shadow-2xl overflow-hidden">
             <div className="bg-gradient-to-r from-blue-500 to-blue-600 px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">

@@ -10,12 +10,12 @@ export default function Contact(){
     }
 
     return <section id="six" className={`w-[100vw] min-h-[100vh] bg-black flex justify-center  text-blue-500 relative `}>
-        <h1 className="absolute text-blue-400 text-5xl top-20 right-150" onClick={() => handleClose(true)}>
+        <h1 className="absolute text-blue-400 text-5xl sm:top-20 sm:right-150" onClick={() => handleClose(false)}>
             Contact
         </h1>
 
         <WindowAnimate show={!isClosed}>
-            <NotepadWindow className="absolute top-60 left-80" title="Contact.txt" onClose={() => handleClose(false)}>
+            <NotepadWindow className="absolute sm:top-60 sm:left-80 top-30" title="Contact.txt" onClose={() => handleClose(true)}>
                 <span className="underline decoration-wavy decoration-red-500 underline-offset-2">Mail</span> <br/>
                 dawzwolak@gmail.com<br/><br/>
                 <span className="underline decoration-wavy decoration-red-500 underline-offset-2">Linkedin</span> <br/>
