@@ -60,7 +60,7 @@ export default function Nav(){
     }, []);
 
     return (
-        <nav className="z-2 bg-black py-5 flex flex-col gap-4 px-4 rounded-4xl w-fit h-fit fixed left-4 top-1/2 -translate-y-[50%] nav-border">
+        <nav className="z-2 bg-black py-5 flex-col gap-4 px-4 rounded-4xl w-fit h-fit fixed left-4 top-1/2 -translate-y-[50%] lg:flex hidden nav-border">
             
             {navItems.map((item, index) => (
                 <span 

@@ -1,4 +1,3 @@
-import './index.css'
 import Nav from './assets/components/Nav.tsx'
 import Header from './assets/components/Header.tsx';
 import CustomCursor from './assets/components/CustomCursor.tsx';
@@ -12,7 +11,7 @@ import Contact from './assets/components/Contact.tsx';
 
 function App() {
   const isMobile = window.innerWidth < 640;
-  const Waves = window.innerWidth <1400;
+  const Waves = window.innerWidth < 1450;
 
   return (
     <>

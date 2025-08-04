@@ -36,7 +36,7 @@ export default function About(){
             </WindowAnimate>
             
             <WindowAnimate show={!isClosedText}>
-                <NotepadWindow className={`absolute lg:top-100 lg:right-150 right-0 top-140 ${!dynamicIndex ? 'z-10' : 'z-0'}`} title='About.txt'
+                <NotepadWindow className={`absolute lg:top-[45%] lg:right-[30%] right-0 top-140 ${!dynamicIndex ? 'z-10' : 'z-0'}`} title='About.txt'
                  onClose={()=>handleClose('text')}>
                 <span>
                     Currently studying towards a Master’s degree in Computer Science. Focusing on web development while exploring game development and AI as side interests.  
