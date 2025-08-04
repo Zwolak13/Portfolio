@@ -12,14 +12,17 @@ import Contact from './assets/components/Contact.tsx';
 
 function App() {
   const isMobile = window.innerWidth < 640;
+  const Waves = window.innerWidth <1400;
 
   return (
     <>
     {!isMobile && <>
       <CustomCursor />
-      <WavyDecor />
       <Nav />
     </>}
+    {!Waves &&
+          <WavyDecor />
+          }
     <main className='bg-black w-[100vw] h-fit overflow-hidden'>
       <Header />
       <Education />

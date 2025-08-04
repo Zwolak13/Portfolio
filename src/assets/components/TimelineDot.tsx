@@ -29,7 +29,7 @@ export default function TimelineDot({last,side,name,title,period}:TimelineDotPro
     <div ref={containerRef} className={`flex flex-col items-center relative mt-4 w-1/2 ${!last && 'min-h-[300px]'}`}>
       <motion.div 
         style={{ opacity: dotOpacity, y: dotY }}
-        className="relative sm:h-12 sm:w-12 w-8 h-8 flex items-center justify-center"
+        className="relative lg:h-12 lg:w-12 w-8 h-8 flex items-center justify-center"
       >
         <div className="h-3/5 w-3/5 bg-blue-400 rounded-full z-10" />
         <motion.svg
@@ -53,11 +53,11 @@ export default function TimelineDot({last,side,name,title,period}:TimelineDotPro
 
       <motion.div 
         style={{ opacity: textOpacity, x: textX }}
-        className={`absolute flex flex-col ${side === 'left' ? 'sm:left-16 left-10 items-start text-start' : 'sm:right-16 right-10 items-end text-end'}`}
+        className={`absolute flex flex-col ${side === 'left' ? 'lg:left-16 left-10 items-start text-start' : 'lg:right-16 right-10 items-end text-end'}`}
       >
-        <h1 className={`text-white sm:text-3xl sm:w-100 text-[12px] w-fit`}>{name}</h1>
-        <h2 className={`text-white/50 sm:*:text-2xl`}>{title}</h2>
-        <span className={`sm:text-xl font-bold flex flex-row ${side === 'left' ? 'justify-start' : 'justify-end' } w-30`}>{period}</span>
+        <h1 className={`text-white lg:text-3xl lg:w-100 text-[12px] w-fit`}>{name}</h1>
+        <h2 className={`text-white/50 lg:*:text-2xl`}>{title}</h2>
+        <span className={`lg:text-xl font-bold flex flex-row ${side === 'left' ? 'justify-start' : 'justify-end' } w-30`}>{period}</span>
       </motion.div>
 
       {!last && (

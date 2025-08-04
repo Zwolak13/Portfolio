@@ -46,7 +46,7 @@ export default function WavyDecor() {
   const waves = allWaveSets[waveIndex];
 
   return (
-    <svg viewBox="0 0 900 600" height="100vh" className="fixed top-0 right-0 pointer-events-none z-200 sm:block hidden">
+    <svg viewBox="0 0 900 600" height="100vh" className="fixed top-0 right-0 pointer-events-none z-200 lg:block hidden">
       {waves.map((d, i) => (
         <motion.path
           key={i}

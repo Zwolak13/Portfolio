@@ -6,8 +6,8 @@ import {MousePointerClick} from 'lucide-react'
 export default function Stacks(){
     const [isClosed, setIsClosed] = useState(false);
 
-    return <section id="three" className={`w-[100vw] sm:min-h-[100vh] min-h-[120vh] bg-black flex  text-blue-500 relative overflow-hidden`}>
-       <h1 className="absolute text-blue-400 text-5xl sm:top-20 sm:right-150  top-10 right-20"
+    return <section id="three" className={`w-[100vw] lg:min-h-[100vh] min-h-[120vh] bg-black flex  text-blue-500 relative overflow-hidden`}>
+       <h1 className="absolute text-blue-400 text-5xl lg:top-20 lg:right-[20%]  top-10 right-20"
         onClick={() => setIsClosed(false)}>
             My Stack
             <div>

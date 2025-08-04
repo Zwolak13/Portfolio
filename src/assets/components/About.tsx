@@ -22,21 +22,21 @@ export default function About(){
     }
 
 
-    return <section id="five" className={`w-[100%] sm:min-h-[100vh] min-h-[150vh] bg-black flex  text-blue-500 relative  justify-center overflow-hidden`}>
-            <h1 className="absolute text-blue-400 text-5xl sm:top-60 sm:left-250 top-20"
+    return <section id="five" className={`w-[100%] lg:min-h-[100vh] min-h-[150vh] bg-black flex  text-blue-500 relative  justify-center overflow-hidden`}>
+            <h1 className="absolute text-blue-400 text-5xl lg:top-60 lg:left-250 top-10"
                 onClick={() => handleClose('all')}>
                 About me
             </h1>
  
             <WindowAnimate show={!isClosedPhoto}>
-                {!isClosedPhoto && <WindowComponent title='Me.png' className={`flex justify-center h-fit w-fit absolute sm:top-20 sm:left-50 top-30 ${dynamicIndex ? 'z-10' : 'z-0'}`} icon='🖼️'
+                {!isClosedPhoto && <WindowComponent title='Me.png' className={`flex justify-center h-fit w-fit absolute lg:top-20 lg:left-50 top-30 ${dynamicIndex ? 'z-10' : 'z-0'}`} icon='🖼️'
                 onClose={()=>handleClose('photo')}> 
-                <img src={MEPNG} alt='Zwolak Photo' className='sm:h-150 h-100'/>
+                <img src={MEPNG} alt='Zwolak Photo' className='lg:h-150 h-100'/>
                 </WindowComponent>}
             </WindowAnimate>
             
             <WindowAnimate show={!isClosedText}>
-                <NotepadWindow className={`absolute sm:top-100 sm:right-150 right-0 top-140 ${!dynamicIndex ? 'z-10' : 'z-0'}`} title='About.txt'
+                <NotepadWindow className={`absolute lg:top-100 lg:right-150 right-0 top-140 ${!dynamicIndex ? 'z-10' : 'z-0'}`} title='About.txt'
                  onClose={()=>handleClose('text')}>
                 <span>
                     Currently studying towards a Master’s degree in Computer Science. Focusing on web development while exploring game development and AI as side interests.  

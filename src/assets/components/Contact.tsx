@@ -10,15 +10,15 @@ export default function Contact(){
     }
 
     return <section id="six" className={`w-[100vw] min-h-[100vh] bg-black flex justify-center  text-blue-500 relative overflow-hidden`}>
-        <h1 className="absolute text-blue-400 text-5xl sm:top-20 sm:right-150" onClick={() => handleClose(false)}>
+        <h1 className="absolute text-blue-400 text-5xl lg:top-20 lg:right-150" onClick={() => handleClose(false)}>
             Contact
         </h1>
 
         <WindowAnimate show={!isClosed}>
-            <NotepadWindow className="absolute sm:top-60 sm:left-80 top-30" title="Contact.txt" onClose={() => handleClose(true)}>
+            <NotepadWindow className="absolute lg:top-60 lg:left-80 top-30" title="Contact.txt" onClose={() => handleClose(true)}>
                 <span className="underline decoration-wavy decoration-red-500 underline-offset-2">Mail</span> <br/>
                 dawzwolak@gmail.com<br/><br/>
-                <span className="underline decoration-wavy decoration-red-500 underline-offset-2">Linkedin</span> <br/>
+                <span className="underline decoration-wavy decoration-red-500 underline-offset-2">LinkedIn</span> <br/>
                 <a href="https://www.linkedin.com/in/dawid-zwolak-6607b8298" target="_blank" className=" hover:text-blue-400">Dawid Zwolak </a><br/><br/>
                 <span className="underline decoration-wavy decoration-red-500 underline-offset-2">Discord</span><br/>
                 zwolak
