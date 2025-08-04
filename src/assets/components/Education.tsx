@@ -2,7 +2,7 @@ import Timeline from "./Timeline";
 
 
 export default function Education(){
-    return <section id="two" className={`w-[100vw] min-h-[110vh] bg-black flex  text-blue-500 relative`}>
+    return <section id="two" className={`w-[100vw] min-h-[110vh] bg-black flex  text-blue-500 relative overflow-hidden`}>
         <h1 className="absolute text-blue-400 text-5xl sm:top-20 sm:left-80 left-20">
             Education
         </h1>

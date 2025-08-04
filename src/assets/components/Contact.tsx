@@ -9,7 +9,7 @@ export default function Contact(){
         setIsClosed(what);
     }
 
-    return <section id="six" className={`w-[100vw] min-h-[100vh] bg-black flex justify-center  text-blue-500 relative `}>
+    return <section id="six" className={`w-[100vw] min-h-[100vh] bg-black flex justify-center  text-blue-500 relative overflow-hidden`}>
         <h1 className="absolute text-blue-400 text-5xl sm:top-20 sm:right-150" onClick={() => handleClose(false)}>
             Contact
         </h1>

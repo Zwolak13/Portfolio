@@ -6,7 +6,7 @@ import ProjectsSingle from "./ProjectsSingle";
 export default function Projects(){
     
 
-    return <section id="four" className={`w-[100vw] min-h-[140vh] bg-black  relative `}>
+    return <section id="four" className={`w-[100vw] sm:min-h-[100vh] min-h-[140vh] bg-black  relative `}>
         <h1 className="absolute text-blue-400 text-5xl sm:top-20 sm:left-120 top-10 right-25">Projects</h1>
         <WindowRoll className="absolute sm:top-60 sm:right-140 top-40" title="Projects.log" footerText="Projects">
             {projects.map((item,index) => (

@@ -20,7 +20,7 @@ function App() {
       <WavyDecor />
       <Nav />
     </>}
-    <main className='bg-black w-[100vw] h-fit overflow-x-hidden'>
+    <main className='bg-black w-[100vw] h-fit overflow-hidden'>
       <Header />
       <Education />
       <Stacks />
