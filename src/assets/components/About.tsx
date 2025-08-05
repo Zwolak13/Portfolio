@@ -23,7 +23,7 @@ export default function About(){
 
 
     return <section id="five" className={`w-[100%] lg:min-h-[100vh] min-h-[150vh] bg-black flex  text-blue-500 relative  justify-center overflow-hidden`}>
-            <h1 className="absolute text-blue-400 text-5xl lg:top-60 lg:left-250 top-10"
+            <h1 className="absolute text-blue-400 text-5xl lg:top-60 lg:left-[62%] top-10 "
                 onClick={() => handleClose('all')}>
                 About me
             </h1>
@@ -36,8 +36,8 @@ export default function About(){
             </WindowAnimate>
             
             <WindowAnimate show={!isClosedText}>
-                <NotepadWindow className={`absolute lg:top-[45%] lg:right-[30%] right-0 top-140 ${!dynamicIndex ? 'z-10' : 'z-0'}`} title='About.txt'
-                 onClose={()=>handleClose('text')}>
+                    <NotepadWindow className={`absolute lg:top-[45%] right-0 md:right-[10%]  lg:!right-[30%] top-140 ${!dynamicIndex ? 'z-10' : 'z-0'}`} title='About.txt'
+                    onClose={()=>handleClose('text')}>
                 <span>
                     Currently studying towards a Master’s degree in Computer Science. Focusing on web development while exploring game development and AI as side interests.  
                     <br /><br />
