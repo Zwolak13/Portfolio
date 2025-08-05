@@ -11,7 +11,6 @@ export default function WindowAnimate({children, show}:WindowAnimateProps){
         <AnimatePresence>
             {show && (
                 <motion.div
-                    className="w-full"
                     initial={{ opacity: 0, scale: 0.9, y: 30 }}
                     animate={{ opacity: 1, scale: 1, y: 0 }}
                     exit={{ opacity: 0, scale: 0.95, y: 20 }}

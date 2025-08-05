@@ -15,7 +15,7 @@ export default function Contact(){
         </h1>
 
         <WindowAnimate show={!isClosed}>
-            <NotepadWindow className="absolute lg:top-60 lg:left-80 top-30" title="Contact.txt" onClose={() => handleClose(true)}>
+            <NotepadWindow className="absolute lg:top-60 lg:!left-80 top-30 left-0 md:left-28" title="Contact.txt" onClose={() => handleClose(true)}>
                 <span className="underline decoration-wavy decoration-red-500 underline-offset-2">Mail</span> <br/>
                 dawzwolak@gmail.com<br/><br/>
                 <span className="underline decoration-wavy decoration-red-500 underline-offset-2">LinkedIn</span> <br/>

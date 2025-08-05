@@ -22,14 +22,14 @@ export default function About(){
     }
 
 
-    return <section id="five" className={`w-[100%] lg:min-h-[100vh] min-h-[150vh] bg-black flex  text-blue-500 relative  justify-center overflow-hidden`}>
+    return <section id="five" className={`w-[100%] lg:min-h-[100vh] min-h-[170vh] bg-black flex  text-blue-500 relative  justify-center overflow-hidden`}>
             <h1 className="absolute text-blue-400 text-5xl lg:top-60 lg:left-[62%] top-10 "
                 onClick={() => handleClose('all')}>
                 About me
             </h1>
  
             <WindowAnimate show={!isClosedPhoto}>
-                {!isClosedPhoto && <WindowComponent title='Me.png' className={`flex justify-center h-fit w-fit absolute lg:top-20 lg:left-50 top-30 ${dynamicIndex ? 'z-10' : 'z-0'}`} icon='🖼️'
+                {!isClosedPhoto && <WindowComponent title='Me.png' className={`flex justify-center h-fit w-fit absolute lg:top-20 lg:left-50 top-30 left-0 ${dynamicIndex ? 'z-10' : 'z-0'}`} icon='🖼️'
                 onClose={()=>handleClose('photo')}> 
                 <img src={MEPNG} alt='Zwolak Photo' className='lg:h-150 h-100'/>
                 </WindowComponent>}
