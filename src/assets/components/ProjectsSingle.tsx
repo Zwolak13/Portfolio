@@ -1,18 +1,21 @@
-import { FaGithub } from 'react-icons/fa'
+import { FaGithub, FaItchIo} from 'react-icons/fa'
+
 
 interface ProjectsSingleProps{
     img: string,
     name: string,
     description: string,
-    github: string,
+    github?: string,
+    itchio?: string,
     stack: string[]
 }
 
-export default function ProjectsSingle({stack,name,description,github}:ProjectsSingleProps){
+export default function ProjectsSingle({stack,name,description,github,itchio}:ProjectsSingleProps){
     return <div className=" border-x-2 border-b-2 border-white p-5">
               <div className='flex flex-row text-blue-400 items-center gap-4'>
                 <h1 className=" text-2xl font-bold">{name}</h1>
-                <a href={github} target='_blank'><FaGithub className='h-6 w-6 '/></a>
+                {github && <a href={github} target='_blank'><FaGithub className='h-6 w-6 '/></a>}
+                {itchio && <a href={itchio} target='_blank'><FaItchIo className='h-6 w-6 '/></a>}
               </div>
             <span className="text-white">{description}</span>
             <div className="flex flex-wrap gap-4 pt-4">

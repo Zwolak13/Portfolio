@@ -6,7 +6,8 @@ interface ProjectsProps{
     name: string,
     descritpion: string,
     img_path: string,
-    github_link: string,
+    github_link?: string,
+    itchio_link?: string,
     stack: string[]
 }
 
@@ -31,6 +32,13 @@ const projects:ProjectsProps[] = [
         img_path: yamsp,
         github_link: 'https://github.com/Zwolak13/MovieSearch',
         stack: ['React', 'Tailwind', 'TS', 'React Query', 'React Router', 'API','Vite']
+    },
+    {
+        name: 'MedievalHiccup',
+        descritpion: 'Unity game inspired by Vampire Survivors, implementing basic concepts',
+        img_path: yamsp,
+        itchio_link: 'https://zwolak13.itch.io/medievalhiccup',
+        stack: ['Unity','C#','Pixelart','2D']
     },
 ]
 

@@ -2,7 +2,7 @@ import TypingEffect from "../utils/TypingEffect";
 
 export default function Header(){
 
-    const titles = ['WebDev',"Frontend","Backend"];
+    const titles = ['WebDev',"Frontend","Backend",'GameDev'];
 
     return(
         <section id="one" className="text-white w-[100%] h-[100vh] relative overflow-hidden">
