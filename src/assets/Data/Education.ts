@@ -19,7 +19,12 @@ const education: SingleEdu[] = [
     school: 'John Paul II Catholic University of Lublin',
     title: 'Master\'s Degree',
     period: '2025 - ....'
-  }
+  },
+    {
+        school: 'HTRI - High Technologies Reliable Integrations',
+        title: "Junior React Developer",
+        period: "08.2025 - ..."
+    }
 ];
 
 export default education;
