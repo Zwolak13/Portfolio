@@ -1,16 +1,35 @@
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Mono&display=swap');
 
 @theme {
     --font-geist: "Geist", sans-serif;
     --font-liber: "Libertinus Mono", monospace;
-    
     --breakpoint-lg: initial;
     --breakpoint-lg: 1450px;
 }
 
-body {
-  overflow-x: hidden;
-  max-width: 100vw;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #090909;
+}
+
+::selection {
+  background: rgba(96, 165, 250, 0.2);
+  color: #e8e5df;
+}
+
+.inner-scroll {
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(96, 165, 250, 0.15) transparent;
+}
+
+.inner-scroll::-webkit-scrollbar { width: 2px; }
+.inner-scroll::-webkit-scrollbar-thumb { background: rgba(96, 165, 250, 0.15); }
+.inner-scroll::-webkit-scrollbar-track { background: transparent; }
